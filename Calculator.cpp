@@ -6,13 +6,13 @@ int main() //функция
 	double a, b, res; //переменные 
 	char op; //операция
 
-	cout << "1 number:";
+	cout << "1 number: ";
 	cin >> a;
 
-	cout << "operator:";
+	cout << "operator (only: + - * /): ";
 	cin >> op;
 
-	cout << "2 number:";
+	cout << "2 number: ";
 	cin >> b;
 
 	switch (op) { //switch – выбор действия в зависимости от значения op
@@ -27,9 +27,18 @@ int main() //функция
 		res = a * b;
 		break;
 	case '/':
-		res = a / b;
+		if (b == 0) {
+			cout << "You can't divide by zero.";
+			return 1;
+		}
+		else {
+			res = a / b;
+		}
 		break;
+	default:
+		cout << "Unknown operation!";
+		return 1;
 	}
-	cout << "resultat=" << res;
+	cout << "resultat:\n" << a << " " << op << " " << b << " = " << res;
 	return 0;
 }
