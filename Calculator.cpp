@@ -41,16 +41,18 @@ int main() //функция
 			cout << "Unknown operation!";
 			return 1;
 		}
-		cout << "resultat:\n" << a << " " << op << " " << b << " = " << res;
+		cout << "Resultat:\n" << a << " " << op << " " << b << " = " << res << "\n";
 
 		bool q;
-		cout << "\nif you want to repeat, press: 1, if not: 0\n";
+		cout << "\nIf you want to repeat, press: 1, if not: 0\n";
 		cin >> q;
 		if (q == 0) {
-			return 0;
+			break;
 		}
 		else {
 			
 		}
 	}
+	cout << "Goodbye!!!";
+	return 0;
 }
