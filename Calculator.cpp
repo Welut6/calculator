@@ -56,4 +56,3 @@ int main() //функция
 	cout << "Goodbye!!!";
 	return 0;
 }
-//test
